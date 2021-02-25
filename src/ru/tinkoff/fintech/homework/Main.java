@@ -1,5 +1,7 @@
 package ru.tinkoff.fintech.homework;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,6 +22,10 @@ public class Main {
         list[3] = book4.name;
         for (int i = 0; i < 4; i++) {
             System.out.println("Book: " + list[i]);
+
+            Random random = new Random();
+            int index = random.nextInt(list.length);
+            System.out.println(list[index]);
         }
 
 
