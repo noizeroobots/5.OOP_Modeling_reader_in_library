@@ -35,6 +35,7 @@ public class Book extends Main{
     public String toString() {
         return author + " - " + name + ". - " + year + " г. - " + pages + " с. " + order + ". ";
     }
+
 }
 // Java-конструктор - это специальный метод, который вызывается при создании экземпляра класса.
 //Book common = new Book("Idiot", "Dostoevsky", 1, 99);
