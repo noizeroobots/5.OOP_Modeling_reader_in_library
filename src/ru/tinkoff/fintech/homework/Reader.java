@@ -3,11 +3,11 @@ package ru.tinkoff.fintech.homework;
 import java.util.Random;
 
 public class Reader extends Main{
-    public static String[] choiceBook(String[] list) {
+    public static Book[] choiceBook(Book[] books) {
         Random random = new Random();
-        int index = random.nextInt(list.length);
-        String name = list[index];
+        int index = random.nextInt(books.length);
+        Book name = books[index];
         System.out.println("topol " + name);
-        return list;
+        return books;
     }
 }
