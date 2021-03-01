@@ -42,14 +42,20 @@ public class Reader {
         Random random_order = new Random();
         int rorder = random_order.nextInt(10);
 
-        if (book.pages == 0 ) { //Вместо кучи if можно было воспользоваться switch case, так красивее и легче добавлять новые операции при их появлении.
-            int r = rorder;
+        int kkkkk = name - author - order + pages;
 
+        switch (book.pages) {
+            case 0:
 
-            int kkkkk = name - author - order + pages - r;
-            System.out.println("Random for divide: " + r);
-            System.out.println("Rate is: " + kkkkk);
+                int k = kkkkk - rpages;
+                System.out.println("This should be divided: " + book.pages);
+                System.out.println("Main expression: " + kkkkk);
+                System.out.println("The result is: " + k);
+                System.out.println("Random result is: " + rpages);
+                break;
+
         }
+        /*Вместо кучи if можно было воспользоваться switch case, так красивее и легче добавлять новые операции при их появлении.*/
         return rate;
     }
 }
