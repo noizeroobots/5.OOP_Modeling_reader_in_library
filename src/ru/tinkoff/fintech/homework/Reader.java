@@ -4,23 +4,23 @@ import java.util.Random;
 
 public class Reader {
 
-    public static Book[] book() {
+    public static Book[] book() { // Массив Book с разной заполненностью
         Book[] books = new Book[4];
         books[0] = new Book("Idiot", "Fedor Dostoevsky");
-        books[1] = new Book("1984", "George Orwell", 1949);
-        books[2] = new Book("Romeo and Juliet", "William Shakespeare", 1595, 318);
-        books[3] = new Book("Master and Margarita", "Michail Bulgakov", 1920, 328, 1);
+        books[1] = new Book("1984", "George Orwell", 320);
+        books[2] = new Book("Romeo and Juliet", "William Shakespeare", 318, 1);
+        books[3] = new Book("Master and Margarita", "Michail Bulgakov", 328, 2);
         return books;
     }
 
-    public static Book choiceBook(Book[] books) {
+    public static Book choiceBook(Book[] books) { // Здесь выбираем книгу с помощью choiceBook
         Random random = new Random();
         int index = random.nextInt(books.length);
         Book book = books[index];
         return book;
     }
 
-    public static String readBook(Book book) { //В readBook нужно вызвать toString() у экземпляра Book
+    public static String readBook(Book book) {
         return book.toString();
     }
 

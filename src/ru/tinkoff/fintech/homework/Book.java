@@ -2,9 +2,8 @@ package ru.tinkoff.fintech.homework;
 
 public class Book {
 
-    private String name;
-    private String author;
-    private int year;
+    private final String name;
+    private final String author;
     private int order;
     private int pages;
 
@@ -16,14 +15,9 @@ public class Book {
         return author;
     }
 
-    public int getYear() {
-        return year;
-    }
-
     public int getOrder() {
         return order;
     }
-
 
     public int getPages() {
         return pages;
@@ -35,24 +29,19 @@ public class Book {
         this.author = author;
     }
 
-    public Book(String name, String author, int year) {  //Перегруженный конструктор №2
+    public Book(String name, String author, int pages) {  //Перегруженный конструктор №2
         this(name, author);
-        this.year = year;
-    }
-
-    public Book(String name, String author, int year, int pages) {  //Перегруженный конструктор №3
-        this(name, author, year);
         this.pages = pages;
     }
 
-    public Book(String name, String author, int year, int pages, int order) {  //Перегруженный конструктор №4
-        this(name, author, year, pages);
+    public Book(String name, String author, int pages, int order) {  //Перегруженный конструктор №3
+        this(name, author, pages);
         this.order = order;
     }
 
     @Override
     public String toString() {
-        return author + " - " + name + ". - " + year + " г. - " + pages + " с. " + order + ". ";
+        return author + "   \"" + name + "\", - " + pages + "стр. " + order + ". ";
     }
 
 }
