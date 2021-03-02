@@ -30,31 +30,36 @@ public class Reader {
         int author = book.author.length();
         int order = book.order;
         int pages = book.pages;
-        int rate = 0;
-        Random random_name = new Random();
-        int rname = random_name.nextInt(10);
-        Random random_author = new Random();
-        int rauthor = random_author.nextInt(10);
-        Random random_year = new Random();
-        int ryear = random_year.nextInt(10);
-        Random random_pages = new Random();
-        int rpages = random_pages.nextInt(10);
-        Random random_order = new Random();
-        int rorder = random_order.nextInt(10);
+        int rate = name + author - order + pages;
 
-        int kkkkk = name - author - order + pages;
-
-        switch (book.pages) {
-            case 0:
-
-                int k = kkkkk - rpages;
-                System.out.println("This should be divided: " + book.pages);
-                System.out.println("Main expression: " + kkkkk);
-                System.out.println("The result is: " + k);
-                System.out.println("Random result is: " + rpages);
-                break;
-
+        if (book.name.equals("")) {
+            Random random_name = new Random();
+            int rname = random_name.nextInt(10);
+            System.out.println("the divided random from name is: " + rname);
+            rate -= rname;
         }
+
+        if (book.author.equals("")) {
+            Random random_author = new Random();
+            int rauthor = random_author.nextInt(10);
+            System.out.println("the divided random from author is: " + rauthor);
+            rate -= rauthor;
+        }
+
+        if (book.order == 0) {
+            Random random_order = new Random();
+            int rorder = random_order.nextInt(10);
+            System.out.println("the divided random from order is: " + rorder);
+            rate -= rorder;
+        }
+
+        if (book.pages == 0) {
+            Random random_pages = new Random();
+            int rpages = random_pages.nextInt(10);
+            System.out.println("the divided random from pages is: " + rpages);
+            rate -= rpages;
+        }
+        System.out.println("The rate is: " + rate);
         /*Вместо кучи if можно было воспользоваться switch case, так красивее и легче добавлять новые операции при их появлении.*/
         return rate;
     }
