@@ -41,7 +41,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return author + "   \"" + name + "\", - " + pages + "стр. " + order + ". ";
+        return author + "  \"" + name + "\", - " + pages + "стр. " + order + ". ";
     }
 
 }

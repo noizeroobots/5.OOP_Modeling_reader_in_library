@@ -16,8 +16,7 @@ public class Reader {
     public static Book choiceBook(Book[] books) { // Здесь выбираем книгу с помощью choiceBook
         Random random = new Random();
         int index = random.nextInt(books.length);
-        Book book = books[index];
-        return book;
+        return books[index];
     }
 
     public static String readBook(Book book) {
@@ -34,31 +33,26 @@ public class Reader {
         if (book.getName().equals("")) {
             Random random_name = new Random();
             int rname = random_name.nextInt(10);
-            System.out.println("the divided random from name is: " + rname);
             rate -= rname;
         }
 
         if (book.getAuthor().equals("")) {
             Random random_author = new Random();
             int rauthor = random_author.nextInt(10);
-            System.out.println("the divided random from author is: " + rauthor);
             rate -= rauthor;
         }
 
         if (book.getOrder() == 0) {
             Random random_order = new Random();
             int rorder = random_order.nextInt(10);
-            System.out.println("the divided random from order is: " + rorder);
             rate -= rorder;
         }
 
         if (book.getPages() == 0) {
             Random random_pages = new Random();
             int rpages = random_pages.nextInt(10);
-            System.out.println("the divided random from pages is: " + rpages);
             rate -= rpages;
         }
-        System.out.println("The rate is: " + rate);
 
         return rate;
     }

@@ -15,9 +15,12 @@ public class Main {
         if (starting.contains("f")) {
             Reader.book();
             Book book = Reader.choiceBook(Reader.book());
-            Reader.readBook(book);
-            System.out.println("The book is: " + book);
-            Reader.rateBook(book);
+            String readBook = Reader.readBook(book);
+            System.out.println("The book is: " + readBook);
+
+            Integer rateBook = Reader.rateBook(book);
+            System.out.println("The rate is: " + rateBook);
+
         } else
             System.out.println("Come back if you want to read something!");
 
