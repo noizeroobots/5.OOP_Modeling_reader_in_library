@@ -24,43 +24,42 @@ public class Reader {
         return book.toString();
     }
 
-    //    public static Integer rateBook(choiceBook(books)) { // rateBook - метод оценки пользователем прочитанной книги // readBook(choiceBook(books));
     public static Integer rateBook(Book book) {
-        int name = book.name.length();
-        int author = book.author.length();
-        int order = book.order;
-        int pages = book.pages;
+        int name = book.getName().length();
+        int author = book.getAuthor().length();
+        int order = book.getOrder();
+        int pages = book.getPages();
         int rate = name + author - order + pages;
 
-        if (book.name.equals("")) {
+        if (book.getName().equals("")) {
             Random random_name = new Random();
             int rname = random_name.nextInt(10);
             System.out.println("the divided random from name is: " + rname);
             rate -= rname;
         }
 
-        if (book.author.equals("")) {
+        if (book.getAuthor().equals("")) {
             Random random_author = new Random();
             int rauthor = random_author.nextInt(10);
             System.out.println("the divided random from author is: " + rauthor);
             rate -= rauthor;
         }
 
-        if (book.order == 0) {
+        if (book.getOrder() == 0) {
             Random random_order = new Random();
             int rorder = random_order.nextInt(10);
             System.out.println("the divided random from order is: " + rorder);
             rate -= rorder;
         }
 
-        if (book.pages == 0) {
+        if (book.getPages() == 0) {
             Random random_pages = new Random();
             int rpages = random_pages.nextInt(10);
             System.out.println("the divided random from pages is: " + rpages);
             rate -= rpages;
         }
         System.out.println("The rate is: " + rate);
-        /*Вместо кучи if можно было воспользоваться switch case, так красивее и легче добавлять новые операции при их появлении.*/
+
         return rate;
     }
 }

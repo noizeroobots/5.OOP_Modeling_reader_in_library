@@ -2,11 +2,33 @@ package ru.tinkoff.fintech.homework;
 
 public class Book {
 
-    String name;
-    String author;
-    int year;
-    int order;
-    int pages;
+    private String name;
+    private String author;
+    private int year;
+    private int order;
+    private int pages;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+
+    public int getPages() {
+        return pages;
+    }
+
 
     public Book(String name, String author) {  //Перегруженный конструктор №1
         this.name = name;
@@ -34,4 +56,4 @@ public class Book {
     }
 
 }
-// Java-конструктор - это специальный метод, который вызывается при создании экземпляра класса.
+
